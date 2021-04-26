@@ -1,0 +1,186 @@
+.conteudoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.esquerda {
+    width: 260px;
+    height: 490px;
+    border-radius: 10px;
+    background-color: #FFF;
+    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
+    border: 1px solid #C1C1C1;
+}
+
+.esquerda .rota {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    overflow-y: scroll;
+    height: 490px;
+}
+
+.rota::-webkit-scrollbar {
+    display: none;
+}
+
+.rota .rotaItem {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.iconeRealizado {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.iconeRealizado img {
+    width: 40px;
+    filter: invert(13%) sepia(66%) saturate(6866%) hue-rotate(348deg) brightness(80%) contrast(87%);
+}
+
+.iconeAndamento {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: -3px;
+}
+
+.iconeAndamento img {
+    width: 40px;
+    filter: invert(13%) sepia(66%) saturate(6866%) hue-rotate(348deg) brightness(80%) contrast(87%);
+}
+
+.rotaContainer {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rota .horario {
+    font-size: 12px;
+    color: #808080;
+}
+
+.divisoriaContainer {
+    width: 100%;
+    padding: 0px 49px;
+}
+
+.divisoria {
+    height: 40px;
+    width: 3px;
+    background-color: #BE1A2B;
+}
+
+.direita {
+    width: 470px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.direita .cliente {
+    width: 470px;
+    height: 160px;
+    background-color: #FFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
+    border: 1px solid #C1C1C1;
+}
+
+.cliente .horario {
+    color: #6F6F6F;
+    font-size: 21px;
+    margin: 10px;
+    text-align: center;
+}
+
+.cliente .dadosCliente {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px 30px
+}
+
+.dadosContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dadosCliente img {
+    width: 80px;
+    height: auto;
+}
+
+.dadosCliente .nome {
+    font-size: 18px;
+    color: black;
+}
+
+.dadosCliente .tipoOs {
+    font-size: 14px;
+    color: black;
+}
+
+.dadosCliente .cto {
+    font-size: 14px;
+    color: black;
+}
+
+.dadosCliente .ppoe {
+    font-size: 14px;
+    color: black;
+}
+
+.direita .servicoRealizado {
+    width: 470px;
+    height: 310px;
+    background-color: #FFF;
+    border-radius: 10px;
+    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
+    border: 1px solid #C1C1C1;
+}
+
+.servicoRealizado hr {
+    border: 1px solid #BE1A2B;
+    width: 90%;
+}
+
+.servico {
+    width: 470px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicoTitulo {
+    font-size: 24px;
+    color: #6F6F6F;
+    padding: 10px 20px;
+}
+
+.servicoTexto {
+    font-size: 16px;
+    padding: 10px 10px;
+}
+
+.obs {
+    width: 470px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}

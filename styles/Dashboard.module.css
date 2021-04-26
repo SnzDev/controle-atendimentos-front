@@ -14,6 +14,7 @@
 }
 
 .conteudo {
+
     width: 100%;
     min-height: 100vh;
     background-color: #F0F2F5;
@@ -44,15 +45,15 @@
 
 .cabecalho .icone {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    border: 2px solid #FFF;
+    
     align-items: center;
+    background-color: #AA4040;
+    border-radius: 50%;
+    color: #FFF;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: #B44FC5;
-    justify-content: center;
-    color: #FFF;
-    font-weight: 500;
 }
 
 .cabecalho img {
@@ -81,7 +82,11 @@
 }
 
 .subMenu {
+    filter: drop-shadow(1px 1px 1px rgb(36, 36, 36));
+    position: relative;
+    z-index:1;
     display: none;
+    
 }
 
 .subMenu a {
@@ -149,13 +154,16 @@
 }
 
 .membro .icone {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #FFF;
+    filter: drop-shadow(1px 1px 1px rgb(36, 36, 36));
+    align-items: center;
+    background-color: #AA4040;
+    border-radius: 50%;
+    color: #FFF;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    background-color: #BE1A2B;
-    text-align: center;
-    color: #FFF;
-    font-weight: 500;
 }
 
 .equipesTrabalhando {}
@@ -174,6 +182,8 @@
     font-weight: 500;
 }
 
+/*================================================================*/
+
 .conteudoContainer {
     width: 100%;
     display: flex;
@@ -181,182 +191,93 @@
     justify-content: space-around;
 }
 
-.esquerda {
-    width: 260px;
-    height: 490px;
-    border-radius: 10px;
-    background-color: #FFF;
-    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
-    border: 1px solid #C1C1C1;
-}
-
-.esquerda .rota {
+.conteudoContainer .iconeMembro {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    align-items: center;
-    overflow-y: scroll;
-    height: 490px;
-}
-
-.rota::-webkit-scrollbar {
-    display: none;
-}
-
-.rota .rotaItem {
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-    width: 150px;
-    cursor: pointer;
-}
-
-.iconeRealizado {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.iconeRealizado img {
-    width: 40px;
-    filter: invert(13%) sepia(66%) saturate(6866%) hue-rotate(348deg) brightness(80%) contrast(87%);
-}
-
-.iconeAndamento {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: -3px;
-}
-
-.iconeAndamento img {
-    width: 40px;
-    filter: invert(13%) sepia(66%) saturate(6866%) hue-rotate(348deg) brightness(80%) contrast(87%);
-}
-
-.rotaContainer {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    border: 3px solid #FFF;
+    ;
+    filter: drop-shadow(5px 5px 5px rgb(36, 36, 36));
+    align-items: center;
+    background-color: #AA4040;
+    border-radius: 50%;
+    margin-top: -50px;
+    color: #FFF;
+    font-size: 60px;
+    width: 130px;
+    height: 130px;
 }
 
-.rota .horario {
-    font-size: 12px;
-    color: #808080;
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 870px;
+    height: 480px;
+    border-radius: 12px;
+    background-color: #FFF;
+    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
 }
 
-.divisoriaContainer {
+.dados {
     width: 100%;
-    padding: 0px 49px;
-}
-
-.divisoria {
-    height: 40px;
-    width: 3px;
-    background-color: #BE1A2B;
-}
-
-.direita {
-    width: 470px;
-    height: 490px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 }
 
-.direita .cliente {
-    width: 470px;
-    height: 160px;
-    background-color: #FFF;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
-    border: 1px solid #C1C1C1;
+.perfil .titulo {
+    color: #4B4B4B;
+    font-size: 30px;
 }
 
-.cliente .horario {
-    color: #6F6F6F;
-    font-size: 21px;
-    margin: 10px;
-    text-align: center;
-}
-
-.cliente .dadosCliente {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 5px 30px
-}
-
-.dadosContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.dadosCliente img {
-    width: 80px;
-    height: auto;
-}
-
-.dadosCliente .nome {
-    font-size: 18px;
-    color: black;
-}
-
-.dadosCliente .tipoOs {
-    font-size: 14px;
-    color: black;
-}
-
-.dadosCliente .cto {
-    font-size: 14px;
-    color: black;
-}
-
-.dadosCliente .ppoe {
-    font-size: 14px;
-    color: black;
-}
-
-.direita .servicoRealizado {
-    width: 470px;
-    height: 310px;
-    background-color: #FFF;
-    border-radius: 10px;
-    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
-    border: 1px solid #C1C1C1;
-}
-
-.servicoRealizado hr {
-    border: 1px solid #BE1A2B;
-    width: 90%;
-}
-
-.servico {
-    width: 470px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-}
-
-.servicoTitulo {
+.perfil .cargo {
+    color: #4B4B4B;
     font-size: 24px;
-    color: #6F6F6F;
-    padding: 10px 20px;
 }
 
-.servicoTexto {
-    font-size: 16px;
-    padding: 10px 10px;
+.perfil .telefone {
+    color: #898989;
+    font-size: 20px;
 }
 
-.obs {
-    width: 470px;
-    height: 150px;
+.perfil .email {
+    color: #898989;
+    font-size: 20px;
+}
+
+.perfil hr {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.rodape img {
+    width: 50px;
+    height: 50px;
+}
+
+.rodape .item {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: #CCC;
+    border-radius: 5px;
+}
+
+.item .titulo {
+    font-size: 18px;
+    color: rgb(36, 36, 36);
+    font-weight: 500;
+}
+
+.item .valor {
+    font-size: 32px;
 }
