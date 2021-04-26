@@ -1,0 +1,62 @@
+/* CONTEUDO CADASTRAR */
+
+.conteudoContainer {
+    width: 820px;
+    height: 600px;
+    background-color: #FFF;
+    border-radius: 10px;
+    border: 1px solid #C1C1C1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.conteudoContainer hr {
+    width: 90%;
+}
+
+.conteudoTitulo {
+    color: #6F6F6F;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.conteudoItem {
+    width: 100%;
+}
+
+.conteudoItem input {
+    width: 370px;
+    margin: 10px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #C1C1C1;
+}
+
+.conteudoTipo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.btnLogin {
+    color: #FFF;
+    background-color: #BE1A2B;
+    width: 400px;
+    height: 52px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btnLogin:hover {
+    background-color: #cc1f30;
+}
+.conteudoBtn {
+    margin:20px;
+    display: flex;
+    justify-content: center;
+}
