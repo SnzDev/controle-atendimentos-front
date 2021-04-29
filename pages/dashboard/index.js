@@ -1,9 +1,59 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import styles from '../../styles/Dashboard.module.css'
+import Cookie from 'js-cookie';
 import Adcionar from './membro/adcionar';
 import Atendimentos from './membro/atendimentos';
+import AdcionarAtendimentos from './membro/adcionarAtendimentos';
+
+
+var axios = require("axios");
+
 
 export default function Dashboard() {
+    const [valorTela, setValorTela] = useState(0);
+    const router = useRouter();
+    const [usuarios, setUsuarios] = useState([]);
+    const [idSelecionado, setIdSelecionado] = useState(0);
+    const nome = Cookie.get('nome');
+
+    useEffect(() => {
+        if (Cookie.get('token') == null) {
+            router.replace('/')
+            return;
+        }
+
+
+        var options = { method: 'GET', url: 'http://localhost:3333/usuarios' };
+
+        axios.request(options).then(function (response) {
+            setUsuarios(response.data);
+        }).catch(function (error) {
+            console.error(error);
+        });
+
+    }, [1])
+
+    function tela() {
+
+        if (valorTela == 0) {
+            return (<img src="./user-experience.svg" />);
+        } else if (valorTela == 1) {
+            console.log(idSelecionado)
+            return <Atendimentos idSelecionado={idSelecionado} />
+
+        } else if (valorTela == 2) {
+            return <Adcionar />
+        }
+        else if (valorTela == 3) {
+            return <AdcionarAtendimentos />
+        }
+        else if (valorTela == 4) {
+            router.replace('/logout')
+        }
+    }
+
     return (
         <div className={styles.container}>
             <Head>
@@ -15,21 +65,24 @@ export default function Dashboard() {
                 <div className={styles.cabecalho}>
                     <div class={styles.cabecalhoContainer}>
                         <div className={styles.icone}>
-                            EV
+                        ON
                     </div>
                         <div className={styles.cabecalhoItem}>
-                            <span className={styles.nome}>Edy Vanrálley</span>
-                            <span className={styles.cargo}>Designer</span>
+                            <span className={styles.nome}>{Cookie.get('nome')}</span>
+                            <span className={styles.cargo}></span>
                         </div>
 
                     </div>
                     <div className={styles.dropdown}>
                         <img src="./more-options.svg" />
                         <div className={styles.subMenu}>
-                            <a href="">Adicionar</a>
-                            <a href="">Histórico</a>
-                            <a href="">Lista</a>
-                            <a href="">Encerrar</a>
+                            <a onClick={() => { setValorTela(2) }}>Adicionar</a>
+                            {Cookie.get('cargo') == 3 ? (
+                                <a onClick={() => { setValorTela(3) }}>Adcionar Atendimentos</a>):''
+                            }
+
+                            {/*<a onClick={() => { setValorTela(2) }}>Lista</a>*/}
+                            <a onClick={() => { setValorTela(4) }}>Encerrar</a>
                         </div>
                     </div>
 
@@ -40,7 +93,7 @@ export default function Dashboard() {
                     <hr></hr>
                 </div>
 
-                <div className={styles.equipesTrabalhando}>
+                {/*<div className={styles.equipesTrabalhando}>
                     <label>Equipes/Membros Trabalhando</label>
                     <div onClick={() => { alert('aa') }} className={styles.membro}>
                         <div>
@@ -53,67 +106,32 @@ export default function Dashboard() {
                             <span className={styles.status}>Em Atendimento</span>
                         </div>
                     </div>
-                </div>
+                </div>*/}
                 <div className={styles.membros}>
                     <label>Todos os Membros</label>
-                    <div className={styles.membro}>
-                        <div>
-                            <div className={styles.icone}>
-                                EV
+                    {usuarios.map(u => {
+                        return (
+                            <div key={u.id} onClick={(e) => { setIdSelecionado(u.id), setValorTela(1) }} className={styles.membro}>
+                                <div>
+                                    <div className={styles.icone}>
+                                        {u.nome[0]}
+                                    </div>
+                                </div>
+                                <div>
+                                    <span className={styles.nomeMembro}>{u.nome.substr(0, u.nome.indexOf(' '))}</span>
+                                    <span className={styles.status}>{u.cargo_nome}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <span className={styles.nomeMembro}>Edy Vanrálley</span>
-                            <span className={styles.status}>Em Atendimento</span>
-                        </div>
-                    </div>
+                        )
+                    })}
+
                 </div>
             </div>
 
             <div className={styles.conteudo}>
-                {/*
-                <img src="./user-experience.svg" />*/
-                }
 
-                <div className={styles.conteudoContainer}>
+                {tela()}
 
-                    <div className={styles.perfil}>
-                        <div className={styles.iconeMembro}>
-                            <span>EV</span>
-                        </div>
-                        <div></div>
-                        <div class={styles.dados}>
-                            <span className={styles.titulo}>Edy Vanrállen</span>
-                            <span className={styles.cargo}>Técnico</span>
-                            <span className={styles.telefone}>86 99815842</span>
-                            <span className={styles.email}>eddiecosta9123@gmail.com</span>
-                        </div>
-                        <hr></hr>
-
-                        <div className={styles.rodape}>
-                            <div className={styles.item}>
-                                <img src="./atendimentos.svg" />
-                                <span className={styles.titulo}>Atendimentos</span>
-                                <span className={styles.valor}>3</span>
-                            </div>
-                            <div className={styles.item}>
-                                <img src="./instalacao.svg" />
-                                <span className={styles.titulo}>Instalações</span>
-                                <span className={styles.valor}>10</span>
-                            </div>
-                            <div className={styles.item}>
-                                <img src="./mudanca-endereco.svg" />
-                                <span className={styles.titulo}>Mudanças de Endereço</span>
-                                <span className={styles.valor}>1</span>
-                            </div>
-                            <div className={styles.item}>
-                                <img src="./manutencao.svg" />
-                                <span className={styles.titulo}>Manutenções</span>
-                                <span className={styles.valor}>1</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>

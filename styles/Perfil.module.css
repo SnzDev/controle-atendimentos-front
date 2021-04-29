@@ -1,0 +1,99 @@
+/*================================================================*/
+
+.conteudoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.conteudoContainer .iconeMembro {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #FFF;
+    ;
+    filter: drop-shadow(5px 5px 5px rgb(36, 36, 36));
+    align-items: center;
+    background-color: #AA4040;
+    border-radius: 50%;
+    margin-top: -50px;
+    color: #FFF;
+    font-size: 60px;
+    width: 130px;
+    height: 130px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 870px;
+    height: 480px;
+    border-radius: 12px;
+    background-color: #FFF;
+    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
+}
+
+.dados {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil .titulo {
+    color: #4B4B4B;
+    font-size: 30px;
+}
+
+.perfil .cargo {
+    color: #4B4B4B;
+    font-size: 24px;
+}
+
+.perfil .telefone {
+    color: #898989;
+    font-size: 20px;
+}
+
+.perfil .email {
+    color: #898989;
+    font-size: 20px;
+}
+
+.perfil hr {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.rodape img {
+    width: 50px;
+    height: 50px;
+}
+
+.rodape .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: #CCC;
+    border-radius: 5px;
+}
+
+.item .titulo {
+    font-size: 18px;
+    color: rgb(36, 36, 36);
+    font-weight: 500;
+}
+
+.item .valor {
+    font-size: 32px;
+}
