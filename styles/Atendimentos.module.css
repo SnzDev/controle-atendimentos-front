@@ -184,3 +184,19 @@
     display: flex;
     flex-direction: column;
 }
+.btnLogin {
+    margin-top: 10px;
+    margin-left: 50px;
+    color: #FFF;
+    background-color: #BE1A2B;
+    width: auto;
+    height: 25px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btnLogin:hover {
+    background-color: #cc1f30;
+}
