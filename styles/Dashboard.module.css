@@ -1,0 +1,283 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #C4C4C4;
+}
+
+.menu {
+    width: 400px;
+    min-height: 100vh;
+    background-color: #FFF;
+}
+
+.conteudo {
+
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F0F2F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo img {
+    width: 300px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    background-color: #BE1A2B;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.cabecalhoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .icone {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #FFF;
+    
+    align-items: center;
+    background-color: #AA4040;
+    border-radius: 50%;
+    color: #FFF;
+    width: 40px;
+    height: 40px;
+}
+
+.cabecalho img {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(146deg) brightness(103%) contrast(101%);
+    width: 25px;
+    cursor: pointer;
+}
+
+.cabecalhoItem {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown:hover .subMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 12px;
+    font-size: 18px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.subMenu {
+    filter: drop-shadow(1px 1px 1px rgb(36, 36, 36));
+    position: relative;
+    z-index:1;
+    display: none;
+    
+}
+
+.subMenu a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.subMenu a:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.nome {
+    color: #FFF;
+    font-size: 18px;
+}
+
+.cargo {
+    color: #FFF;
+    font-size: 12px;
+}
+
+.pesquisar {
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #CCC;
+}
+
+.pesquisar input {
+    width: 95%;
+    height: 30px;
+    border-radius: 9%;
+    border: 3px solid #C1C1C1;
+}
+
+.pesquisar hr {
+    width: 100%;
+}
+
+.membro {
+    cursor: pointer;
+    border-top: 1px solid #C1C1C1;
+    border-bottom: 1px solid #C1C1C1;
+    display: flex;
+    flex-direction: row;
+}
+
+.membro div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2px;
+}
+
+.membro .nomeMembro {
+    font-size: 18px;
+}
+
+.membro .status {
+    font-size: 12px;
+}
+
+.membro .icone {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #FFF;
+    filter: drop-shadow(1px 1px 1px rgb(36, 36, 36));
+    align-items: center;
+    background-color: #AA4040;
+    border-radius: 50%;
+    color: #FFF;
+    width: 40px;
+    height: 40px;
+}
+
+.equipesTrabalhando {}
+
+.equipesTrabalhando label {
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.membros {}
+
+.membros label {
+    margin: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/*================================================================*/
+
+.conteudoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.conteudoContainer .iconeMembro {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #FFF;
+    ;
+    filter: drop-shadow(5px 5px 5px rgb(36, 36, 36));
+    align-items: center;
+    background-color: #AA4040;
+    border-radius: 50%;
+    margin-top: -50px;
+    color: #FFF;
+    font-size: 60px;
+    width: 130px;
+    height: 130px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 870px;
+    height: 480px;
+    border-radius: 12px;
+    background-color: #FFF;
+    filter: drop-shadow(1px 5px 5px rgb(36, 36, 36));
+}
+
+.dados {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil .titulo {
+    color: #4B4B4B;
+    font-size: 30px;
+}
+
+.perfil .cargo {
+    color: #4B4B4B;
+    font-size: 24px;
+}
+
+.perfil .telefone {
+    color: #898989;
+    font-size: 20px;
+}
+
+.perfil .email {
+    color: #898989;
+    font-size: 20px;
+}
+
+.perfil hr {
+    width: 90%;
+    margin: 40px auto;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.rodape img {
+    width: 50px;
+    height: 50px;
+}
+
+.rodape .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background-color: #CCC;
+    border-radius: 5px;
+}
+
+.item .titulo {
+    font-size: 18px;
+    color: rgb(36, 36, 36);
+    font-weight: 500;
+}
+
+.item .valor {
+    font-size: 32px;
+}
